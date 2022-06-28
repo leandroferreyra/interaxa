@@ -54,7 +54,7 @@ public class PersonaServiceImpl implements PersonaService {
 	}
 
 	@Override
-	public Persona updateUsuarioByID(PersonaDTO p, Long id) {
+	public Persona updatePersonaByID(PersonaDTO p, Long id) {
 		return this.repository.save(this.mapper.mapWithID(p, id));
 	}
 

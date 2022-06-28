@@ -17,7 +17,7 @@ public interface PersonaService {
 	
 	public void deletePersonaByID(Long id);
 	
-	public Persona updateUsuarioByID(PersonaDTO p, Long id);
+	public Persona updatePersonaByID(PersonaDTO p, Long id);
 	
 	public Persona findByNombre(String nombre);
 	

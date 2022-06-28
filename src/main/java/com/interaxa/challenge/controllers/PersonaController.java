@@ -95,7 +95,7 @@ public class PersonaController {
 			if (personaByDNI != null) {
 				return new ResponseEntity<PersonaResponse>(new PersonaResponse(false, "La persona con ese dni ya existe", HttpStatus.CONFLICT, new ArrayList<>()), HttpStatus.CONFLICT);
 			}
-			Persona personaActualizada = this.personaService.updateUsuarioByID(persona, id);
+			Persona personaActualizada = this.personaService.updatePersonaByID(persona, id);
 			return new ResponseEntity<PersonaResponse>(new PersonaResponse(true, "Persona actualizada", HttpStatus.OK, new ArrayList<>(Arrays.asList(personaActualizada))),HttpStatus.OK);
 		}	
 		return new ResponseEntity<PersonaResponse>(new PersonaResponse(false, "Persona no existe con id " + id, HttpStatus.NOT_FOUND, new ArrayList<>()),HttpStatus.NOT_FOUND);
